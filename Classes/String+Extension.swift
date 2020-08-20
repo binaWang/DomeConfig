@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 extension UIColor {
     static func random() -> UIColor {
             let red = CGFloat(arc4random()%256)/255.0
@@ -18,7 +19,6 @@ extension UIColor {
 
 
 extension Character {
-
     static func arbitraryChinese() -> Character {
         let random = UInt32.random(in: 0x4E00...0x9FA5)
         return Character(UnicodeScalar(random)!)
@@ -39,17 +39,6 @@ extension String {
             charBlock(index)
         }
         return  String(char)
-    }
-//    static func arbitrary(in range: ClosedRange<Int>) -> String {
-//        let randomCharacters = tabulate(times: randomLength) { _ in
-//            Character.arbitrary()
-//        }
-//        return String(randomCharacters)
-//    }
-
-    
-   static func tabulate<A>(times: Int, transform: (Int) -> A) -> [A] {
-        return (0..<times).map(transform)
     }
     
 }

@@ -26,12 +26,8 @@ class ViewController: UIViewController {
         print(random)
         let code = Unicode.Scalar(random)!
         print(Character(code))
-//        "".ran
-//        print(String.arbitrary(length: 100))
         print(String.arbitrary(length: 40, charBlock: { _ in
-//            Character.arbitraryChinese()
             Character.arbitraryEnglishCapital()
-
         }))
 
     }
